@@ -36,13 +36,34 @@ namespace AddressBookSystem
 
         static void Main(string[] args)
         {
-            Console.WriteLine("Welcome to Address Book sysytem,");
+
+
             AddressBook addressBook = new AddressBook();
-            addressBook.AddContact();
+            while (true)
+            {
+                Console.WriteLine("Welcome to Address Book Program");
+                Console.WriteLine("1. add contact ");
+                try
+                {
+                    switch (Convert.ToInt32(Console.ReadLine()))
+                    {
+                        case 1:
+                            addressBook.AddContact();
+                            break;
+                    }
+                }
+                catch (Exception)
+                {
+                    Console.WriteLine("wrong input");
+                }
+            }
         }
-
-
     }
 }
+
+
+
+
+        
 
 
